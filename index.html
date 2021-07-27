@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/design.css">
+        
+        <meta name="viewport"
+                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title font-style">Tic <span id="tac">Tac</span> Toe</h1>
+            <div class="status-action font-style">
+                <div class="status">× is next</div>
+                <div class="reset">Reset</div>
+            </div>
+            <div class="game-grid">
+                <div class="game-cell font-style top-left"></div>
+                <div class="game-cell font-style top-mid"></div>
+                <div class="game-cell font-style top-right"></div>
+                <div class="game-cell font-style mid-left"></div>
+                <div class="game-cell font-style mid-mid"></div>
+                <div class="game-cell font-style mid-right"></div>
+                <div class="game-cell font-style bottom-left"></div>
+                <div class="game-cell font-style bottom-mid"></div>
+                <div class="game-cell font-style bottom-right"></div>
+            </div>
+        </div>
+        
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false" id="result-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title font-style" id="modalLabel">Tic Tac Toe</h5>
+                  
+                </div>
+                <div class="modal-body" id="winner-modal">
+                  <h1 class="font-style" id="result-shown"></h1>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="modal-restart">Restart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <script src="app/app.js"></script>
+        
+    </body>
+</html>
