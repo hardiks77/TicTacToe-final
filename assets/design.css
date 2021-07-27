@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #669999;
+    margin: 50px;
+    padding: 30px;
+    height: 938px;
+    width: 749px;
+    max-width: 749px;
+    text-align: center;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.title #tac{
+    color: #d1d1e0;
+}
+
+.font-style{
+  color: #293851; 
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+}
+
+.title {
+  
+  font-size: 54px; 
+  
+}
+
+#modalLabel{
+  font-size: 44px;
+}
+
+
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.status span{
+    color: #a3c2c2;
+}
+
+.status-action {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    color: #204060;
+    height: 30px;
+}
+
+.reset {
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.reset:hover{
+    color: #d1d1e0;
+    transform: scale(1.2);
+}
+
+.game-grid{
+    background: #3d5c5c;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-cell{
+    height: 233px;
+    width: 233px;
+    background: #669999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x::after{
+    content: "×";
+    font-size: 200px;
+    color: #293d3d;
+}
+
+.o::after{
+    content: "○";
+    font-size: 200px;
+    color: #a3c2c2;
+}
+
+.x, .o{
+    cursor: default;
+}
+
+.won::after{
+    color: #b8f8e0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .container{
+        width: 500px;
+        max-width: 500px;
+        height: fit-content;
+    }
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+        width: 350px;
+        max-width: 350px;
+        height: fit-content;
+        margin: 25px;
+        padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 100px;
+    }
+  }
